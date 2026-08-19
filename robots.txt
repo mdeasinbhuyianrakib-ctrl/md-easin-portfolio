@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Update the domain below after you connect your custom domain.
-Sitemap: https://md-easin-portfolio.pages.dev/sitemap.xml
+Sitemap: https://mdeasinbhuyianrakib-ctrl.github.io/md-easin-portfolio/sitemap.xml

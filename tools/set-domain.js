@@ -21,8 +21,13 @@ if (!domain) {
   process.exit(1);
 }
 domain = domain.trim().replace(/\/+$/, "");
-if (!/^https?:\/\/[^\s/]+\.[^\s/]+$/.test(domain)) {
-  console.error("That does not look like a full domain. Example: https://easin.dev");
+/* A base URL, with an optional path — GitHub Pages project sites live under
+   one (https://user.github.io/repo), Cloudflare Pages and custom domains
+   do not (https://easin.dev). Both are accepted. */
+if (!/^https?:\/\/[^\s/]+\.[^\s/]+(\/[^\s]*)?$/.test(domain)) {
+  console.error("That does not look like a site URL.");
+  console.error("Examples:  https://easin.dev");
+  console.error("           https://username.github.io/repo-name");
   process.exit(1);
 }
 
