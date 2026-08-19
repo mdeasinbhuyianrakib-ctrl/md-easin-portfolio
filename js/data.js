@@ -88,8 +88,7 @@ window.PORTFOLIO_DATA = {
        WhatsApp, set this back to "" and the WhatsApp button disappears. */
     whatsapp: "966565072169",
 
-    // TODO: add your LinkedIn profile URL, e.g. "https://www.linkedin.com/in/username"
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/md-easin-bhuyian-rakib-3730503b8",
 
     // GitHub account that owns this repository.
     github: "https://github.com/mdeasinbhuyianrakib-ctrl",
