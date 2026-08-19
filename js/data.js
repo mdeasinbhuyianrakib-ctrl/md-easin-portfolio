@@ -102,7 +102,7 @@ window.PORTFOLIO_DATA = {
      ------------------------------------------------------------------ */
   site: {
     // TODO: replace with your real domain after deploying (no trailing slash)
-    domain: "https://md-easin-portfolio.pages.dev",
+    domain: "https://mdeasinbhuyianrakib-ctrl.github.io/md-easin-portfolio",
     /* The CV file. Place the PDF at exactly this path. */
     cvFile: "cv/MD-Easin-Bhuyian-CV.pdf",
     copyrightStartYear: 2026
