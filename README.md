@@ -31,7 +31,20 @@ dependencies. Deployable to Cloudflare Pages as-is.
 │   ├── projects/                 # project screenshots
 │   └── branding/                 # favicon, logo, og-cover.png
 └── tools/
-    └── build-cv.sh               # regenerates the CV PDF from cv-source.html
+    ├── check-ready.js            # কী কী এখনো বাকি তা দেখায়
+    ├── set-domain.js             # এক কমান্ডে সব জায়গায় ডোমেইন বসায়
+    ├── build-diagrams.js         # প্রজেক্টের ওয়ার্কফ্লো ডায়াগ্রাম তৈরি করে
+    └── build-cv.sh               # cv-source.html থেকে CV PDF তৈরি করে
+```
+
+## দ্রুত কমান্ড / Quick commands
+
+```bash
+node tools/check-ready.js                          # কী কী বাকি আছে দেখুন
+node tools/set-domain.js https://your-domain.com   # ডোমেইন বসান (৪ ফাইলে, ১৩ জায়গায়)
+node tools/build-diagrams.js                       # প্রজেক্ট ডায়াগ্রাম আবার বানান
+bash  tools/build-cv.sh                            # CV PDF আবার বানান
+python3 -m http.server 8000                        # লোকালি চালান
 ```
 
 ---
@@ -89,7 +102,7 @@ contact: {
 | ফোল্ডার | কী রাখবেন |
 |---|---|
 | `images/profile/` | আপনার পোর্ট্রেট (~800×1000px, JPG/WebP, <200KB) |
-| `images/projects/` | প্রজেক্টের স্ক্রিনশট (16:10, ~1280×800px, <250KB) |
+| `images/projects/` | প্রজেক্টের ছবি — এখন ৬টি জেনারেট করা ওয়ার্কফ্লো ডায়াগ্রাম আছে |
 | `images/branding/` | favicon, logo, og-cover.png (তৈরি করা আছে) |
 
 ছবি যোগ করার পর `js/data.js`-এ পাথ বসান:
@@ -101,6 +114,14 @@ projects: [{ image: "images/projects/ai-customer-support.jpg", ... }]
 
 ছবি না থাকলে বা লোড না হলে সাইট নিজে থেকেই পরিচ্ছন্ন প্লেসহোল্ডার দেখায় —
 কোনো ভাঙা ছবির আইকন বা ভাঙা লেআউট হয় না। অন্য কারো স্টক ফটো ব্যবহার করবেন না।
+
+**প্রজেক্টের ছবি:** প্রতিটি প্রজেক্টের জন্য একটি করে ওয়ার্কফ্লো ডায়াগ্রাম
+তৈরি করা আছে (`images/projects/*.svg`), যেগুলো `js/data.js`-এর `workflow`
+থেকেই আঁকা — তাই কার্ডে যা লেখা, ছবিতেও তাই। প্রতিটিতে "PLANNED WORKFLOW"
+লেখা আছে, অর্থাৎ এটি পরিকল্পিত প্রসেসের ডায়াগ্রাম, চালু সিস্টেমের স্ক্রিনশট নয়।
+ওয়ার্কফ্লো এডিট করলে `node tools/build-diagrams.js` চালালেই ছবি আপডেট হবে।
+আসল প্রজেক্ট দাঁড়িয়ে গেলে n8n/Make ক্যানভাসের স্ক্রিনশট দিয়ে বদলে দিন —
+সেটাই সবচেয়ে বিশ্বাসযোগ্য।
 
 ---
 
@@ -169,11 +190,16 @@ Cloudflare Pages → Create application → Pages → **Upload assets** → প�
 
 ### ডিপ্লয়ের পরের কাজ
 
-ডোমেইন ঠিক হয়ে গেলে এই তিন জায়গায় ডোমেইন বসান:
+ডোমেইন ঠিক হয়ে গেলে একটি কমান্ডেই সব জায়গায় বসে যাবে:
 
-1. `js/data.js` → `site.domain`
-2. `index.html` → `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`
-3. `robots.txt` ও `sitemap.xml` → `https://YOUR-DOMAIN/`
+```bash
+node tools/set-domain.js https://your-domain.com
+```
+
+এটি `js/data.js`, `index.html` (canonical, og:url, og:image, twitter:image),
+`robots.txt` আর `sitemap.xml` — চারটি ফাইলের ১৩টি রেফারেন্স আপডেট করে এবং
+sitemap-এর `lastmod` আজকের তারিখে সেট করে। এরপর commit + push করলেই
+Cloudflare নিজে থেকে আবার ডিপ্লয় করবে।
 
 ---
 

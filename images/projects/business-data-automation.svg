@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-label="Planned workflow: Sources then API pull then Clean and normalise then Store then Scheduled refresh">
+  <title>Business Data Automation — Planned workflow</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06162F"/><stop offset="0.55" stop-color="#0A1F44"/><stop offset="1" stop-color="#123063"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.82" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#1D6FE0" stop-opacity="0.34"/><stop offset="1" stop-color="#1D6FE0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect width="1280" height="800" fill="url(#bg)"/>
+    <rect width="1280" height="800" fill="url(#grid)"/>
+    <rect width="1280" height="800" fill="url(#glow)"/>
+    <rect x="0" y="0" width="7" height="800" fill="#1D6FE0"/>
+    <rect x="149" y="292" width="150" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="224" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Sources</text><path d="M325 326 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M345 321 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="385" y="292" width="150" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="460" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">API pull</text><path d="M561 326 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M581 321 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="621" y="292" width="275" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="758.5" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Clean and normalise</text><path d="M922 326 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M942 321 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="982" y="292" width="150" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="1057" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Store</text><path d="M640 372 v32" stroke="#4C9AFF" stroke-width="2" stroke-opacity="0.75" fill="none"/><path d="M635 398 l5 6 5 -6" stroke="#4C9AFF" stroke-width="2" stroke-opacity="0.75" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="514" y="416" width="252" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="640" y="457" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Scheduled refresh</text>
+    <path d="M64 722 h130" stroke="#1D6FE0" stroke-width="3" stroke-linecap="round"/>
+    <text x="64" y="756" font-size="19" font-weight="700" letter-spacing="3.6" fill="#7FB2FF">PLANNED WORKFLOW</text>
+  </g>
+</svg>

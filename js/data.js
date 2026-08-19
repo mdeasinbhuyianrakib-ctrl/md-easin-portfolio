@@ -252,7 +252,7 @@ window.PORTFOLIO_DATA = {
   projects: [
     {
       status: "planned",
-      image: "", // TODO: add images/projects/ai-customer-support.jpg and put the path here
+      image: "images/projects/ai-customer-support-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Customer Support Automation", ar: "أتمتة دعم العملاء بالذكاء الاصطناعي", bn: "এআই কাস্টমার সাপোর্ট অটোমেশন" },
       problem: {
         en: "Support teams re-answer the same questions across email, WhatsApp and web chat, and replies slow down outside working hours.",
@@ -279,7 +279,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/lead-generation.jpg and put the path here
+      image: "images/projects/lead-generation-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Lead Generation Automation", ar: "أتمتة جذب العملاء المحتملين", bn: "লিড জেনারেশন অটোমেশন" },
       problem: {
         en: "Inbound leads arrive through several channels and are qualified by hand, so follow-up is inconsistent and slow.",
@@ -306,7 +306,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/email-automation.jpg and put the path here
+      image: "images/projects/ai-email-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Email Automation", ar: "أتمتة البريد الإلكتروني بالذكاء الاصطناعي", bn: "এআই ইমেইল অটোমেশন" },
       problem: {
         en: "A shared inbox mixes invoices, support requests and sales enquiries, and someone has to triage it manually every morning.",
@@ -333,7 +333,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/business-data.jpg and put the path here
+      image: "images/projects/business-data-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Business Data Automation", ar: "أتمتة بيانات الأعمال", bn: "বিজনেস ডেটা অটোমেশন" },
       problem: {
         en: "Operational numbers live in separate exports, so building a weekly view means repeating the same copy-paste work.",
@@ -360,7 +360,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/document-processing.jpg and put the path here
+      image: "images/projects/document-processing-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Document Processing Automation", ar: "أتمتة معالجة المستندات", bn: "ডকুমেন্ট প্রসেসিং অটোমেশন" },
       problem: {
         en: "Invoices, delivery notes and forms arrive as PDFs and images, and the values are keyed into the system by hand.",
@@ -387,7 +387,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/reporting-dashboard.jpg and put the path here
+      image: "images/projects/ai-reporting-dashboard.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Reporting Dashboard", ar: "لوحة تقارير بالذكاء الاصطناعي", bn: "এআই রিপোর্টিং ড্যাশবোর্ড" },
       problem: {
         en: "Managers receive raw tables and still have to work out what changed and what needs attention.",
