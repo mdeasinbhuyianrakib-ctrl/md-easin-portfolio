@@ -47,11 +47,9 @@ window.PORTFOLIO_DATA = {
       ar: "أصمّم سير عمل مدعوماً بالذكاء الاصطناعي وأنظمة أتمتة وحلول أعمال ذكية تساعد المؤسسات على تقليل العمل المتكرر وتوسيع نطاق عملياتها.",
       bn: "আমি এআই-চালিত ওয়ার্কফ্লো, অটোমেশন সিস্টেম ও বুদ্ধিমান ব্যবসায়িক সমাধান ডিজাইন করি, যা প্রতিষ্ঠানের পুনরাবৃত্ত কাজ কমায় এবং কার্যক্রম সম্প্রসারণে সহায়তা করে।"
     },
-    /* Profile photo.
-       Leave "" and a clean initials placeholder is shown — nothing breaks.
-       TODO: add your portrait to images/profile/ and set the path here, e.g.
-             photo: "images/profile/md-easin-bhuyian.jpg" */
-    photo:    "",
+    /* Profile photo. Leave "" and a clean initials placeholder is shown
+       instead — nothing breaks. Portrait orientation works best (3:4). */
+    photo:    "images/profile/md-easin-bhuyian.jpg",
     photoAlt: {
       en: "Portrait of MD Easin Bhuyian, AI Automation Engineer",
       ar: "صورة شخصية لـ MD Easin Bhuyian، مهندس أتمتة بالذكاء الاصطناعي",
