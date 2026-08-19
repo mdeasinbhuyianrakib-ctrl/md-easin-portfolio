@@ -122,8 +122,9 @@
 
     var strip = slot("strip");
     if (strip) {
+      var langs = (P.spokenLanguages || []).map(function (l) { return tx(l.name); }).join(" · ");
       strip.innerHTML = items.slice(0, 4).map(function (h) { return "<li>" + esc(tx(h)) + "</li>"; }).join("") +
-                        "<li>EN · العربية · বাংলা</li>";
+                        (langs ? "<li>" + esc(langs) + "</li>" : "");
     }
   }
 
@@ -151,11 +152,17 @@
   }
 
   function renderSpokenLanguages() {
+    var langs = P.spokenLanguages || [];
     var box = slot("spoken-languages");
-    if (!box) return;
-    box.innerHTML = (P.spokenLanguages || []).map(function (l) {
-      return '<p class="row"><b>' + esc(tx(l.name)) + "</b><span>" + esc(tx(l.note)) + "</span></p>";
-    }).join("");
+    if (box) {
+      box.innerHTML = langs.map(function (l) {
+        return '<p class="row"><b>' + esc(tx(l.name)) + "</b><span>" + esc(tx(l.note)) + "</span></p>";
+      }).join("");
+    }
+    /* the About panel and the strip read the same list, so adding a language
+       in js/data.js updates every place it appears */
+    var inline = slot("spoken-inline");
+    if (inline) inline.textContent = langs.map(function (l) { return tx(l.name); }).join(" · ");
   }
 
   function renderAbout() {

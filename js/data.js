@@ -59,14 +59,16 @@ window.PORTFOLIO_DATA = {
        To change a level, edit `note`. Other options you can use:
          { en: "Native",  ar: "اللغة الأم",  bn: "মাতৃভাষা" }
          { en: "Fluent",  ar: "طلاقة",       bn: "সাবলীল" }
-         { en: "Professional", ar: "مستوى مهني", bn: "পেশাগত" }
+         { en: "Professional",   ar: "مستوى مهني", bn: "পেশাগত" }
+         { en: "Conversational", ar: "محادثة",     bn: "কথোপকথন" }
          { en: "Working", ar: "مستوى عملي",  bn: "কর্মক্ষম" }
          { en: "Basic",   ar: "مستوى أساسي", bn: "প্রাথমিক" }
        A blank note ("") simply shows the language name with no level. */
     spokenLanguages: [
       { name: { en: "Bengali", ar: "البنغالية",  bn: "বাংলা" },  note: { en: "Native",       ar: "اللغة الأم",  bn: "মাতৃভাষা" } },
       { name: { en: "English", ar: "الإنجليزية", bn: "ইংরেজি" }, note: { en: "Professional", ar: "مستوى مهني",  bn: "পেশাগত" } },
-      { name: { en: "Arabic",  ar: "العربية",    bn: "আরবি" },   note: { en: "Fluent",       ar: "طلاقة",       bn: "সাবলীল" } }
+      { name: { en: "Arabic",  ar: "العربية",    bn: "আরবি" },   note: { en: "Fluent",       ar: "طلاقة",       bn: "সাবলীল" } },
+      { name: { en: "Hindi",   ar: "الهندية",    bn: "হিন্দি" }, note: { en: "Conversational", ar: "محادثة",    bn: "কথোপকথন" } }
     ]
   },
 
