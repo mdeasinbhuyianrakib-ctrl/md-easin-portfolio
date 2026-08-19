@@ -77,14 +77,16 @@ window.PORTFOLIO_DATA = {
      Leave a value as "" and the item disappears from the whole site.
      ------------------------------------------------------------------ */
   contact: {
-    // TODO: verify this is the address you want public.
-    email: "easinbhuyian@gmail.com",
+    email: "mdeasinbhuyianrakib@gmail.com",
 
-    // TODO: add your real phone number in international format, e.g. "+9665XXXXXXXX"
-    phone: "",
+    /* International format. Written exactly as you want it displayed —
+       the tel: link strips the spaces automatically. */
+    phone: "+966 56 507 2169",
 
-    // TODO: add WhatsApp number, DIGITS ONLY with country code, e.g. "9665XXXXXXXX"
-    whatsapp: "",
+    /* Digits only, with country code — used to build the wa.me link.
+       Currently the same number as `phone`. If that number is NOT on
+       WhatsApp, set this back to "" and the WhatsApp button disappears. */
+    whatsapp: "966565072169",
 
     // TODO: add your LinkedIn profile URL, e.g. "https://www.linkedin.com/in/username"
     linkedin: "",

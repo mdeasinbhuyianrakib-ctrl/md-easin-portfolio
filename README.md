@@ -85,7 +85,7 @@ python3 -m http.server 8000                        # লোকালি চা�
 ```js
 // js/data.js
 contact: {
-  email:    "easinbhuyian@gmail.com",
+  email:    "mdeasinbhuyianrakib@gmail.com",
   phone:    "+966500000000",
   whatsapp: "966500000000",              // digits only, with country code
   linkedin: "https://www.linkedin.com/in/your-handle",
