@@ -47,28 +47,28 @@ window.PORTFOLIO_DATA = {
       ar: "أصمّم سير عمل مدعوماً بالذكاء الاصطناعي وأنظمة أتمتة وحلول أعمال ذكية تساعد المؤسسات على تقليل العمل المتكرر وتوسيع نطاق عملياتها.",
       bn: "আমি এআই-চালিত ওয়ার্কফ্লো, অটোমেশন সিস্টেম ও বুদ্ধিমান ব্যবসায়িক সমাধান ডিজাইন করি, যা প্রতিষ্ঠানের পুনরাবৃত্ত কাজ কমায় এবং কার্যক্রম সম্প্রসারণে সহায়তা করে।"
     },
-    /* Profile photo.
-       Leave "" and a clean initials placeholder is shown — nothing breaks.
-       TODO: add your portrait to images/profile/ and set the path here, e.g.
-             photo: "images/profile/md-easin-bhuyian.jpg" */
-    photo:    "",
+    /* Profile photo. Leave "" and a clean initials placeholder is shown
+       instead — nothing breaks. Portrait orientation works best (3:4). */
+    photo:    "images/profile/md-easin-bhuyian.jpg",
     photoAlt: {
       en: "Portrait of MD Easin Bhuyian, AI Automation Engineer",
       ar: "صورة شخصية لـ MD Easin Bhuyian، مهندس أتمتة بالذكاء الاصطناعي",
       bn: "এমডি ইয়াসিন ভূঁইয়া, এআই অটোমেশন ইঞ্জিনিয়ারের ছবি"
     },
     /* Spoken languages — shown in the hero card.
-       TODO: `note` is intentionally blank because your actual proficiency is
-       not something this site should guess. Fill each one in yourself, e.g.
-         note: { en: "Native", ar: "اللغة الأم", bn: "মাতৃভাষা" }
-         note: { en: "Professional", ar: "مستوى مهني", bn: "পেশাগত" }
-         note: { en: "Working", ar: "مستوى عملي", bn: "কর্মক্ষম" }
-         note: { en: "Basic", ar: "مستوى أساسي", bn: "প্রাথমিক" }
-       A blank note simply shows the language name with no level. */
+       To change a level, edit `note`. Other options you can use:
+         { en: "Native",  ar: "اللغة الأم",  bn: "মাতৃভাষা" }
+         { en: "Fluent",  ar: "طلاقة",       bn: "সাবলীল" }
+         { en: "Professional",   ar: "مستوى مهني", bn: "পেশাগত" }
+         { en: "Conversational", ar: "محادثة",     bn: "কথোপকথন" }
+         { en: "Working", ar: "مستوى عملي",  bn: "কর্মক্ষম" }
+         { en: "Basic",   ar: "مستوى أساسي", bn: "প্রাথমিক" }
+       A blank note ("") simply shows the language name with no level. */
     spokenLanguages: [
-      { name: { en: "English", ar: "الإنجليزية", bn: "ইংরেজি" }, note: { en: "", ar: "", bn: "" } },
-      { name: { en: "Arabic",  ar: "العربية",    bn: "আরবি" },   note: { en: "", ar: "", bn: "" } },
-      { name: { en: "Bengali", ar: "البنغالية",  bn: "বাংলা" },  note: { en: "", ar: "", bn: "" } }
+      { name: { en: "Bengali", ar: "البنغالية",  bn: "বাংলা" },  note: { en: "Native",       ar: "اللغة الأم",  bn: "মাতৃভাষা" } },
+      { name: { en: "English", ar: "الإنجليزية", bn: "ইংরেজি" }, note: { en: "Professional", ar: "مستوى مهني",  bn: "পেশাগত" } },
+      { name: { en: "Arabic",  ar: "العربية",    bn: "আরবি" },   note: { en: "Fluent",       ar: "طلاقة",       bn: "সাবলীল" } },
+      { name: { en: "Hindi",   ar: "الهندية",    bn: "হিন্দি" }, note: { en: "Conversational", ar: "محادثة",    bn: "কথোপকথন" } }
     ]
   },
 
@@ -77,17 +77,18 @@ window.PORTFOLIO_DATA = {
      Leave a value as "" and the item disappears from the whole site.
      ------------------------------------------------------------------ */
   contact: {
-    // TODO: verify this is the address you want public.
-    email: "easinbhuyian@gmail.com",
+    email: "mdeasinbhuyianrakib@gmail.com",
 
-    // TODO: add your real phone number in international format, e.g. "+9665XXXXXXXX"
-    phone: "",
+    /* International format. Written exactly as you want it displayed —
+       the tel: link strips the spaces automatically. */
+    phone: "+966 56 507 2169",
 
-    // TODO: add WhatsApp number, DIGITS ONLY with country code, e.g. "9665XXXXXXXX"
-    whatsapp: "",
+    /* Digits only, with country code — used to build the wa.me link.
+       Currently the same number as `phone`. If that number is NOT on
+       WhatsApp, set this back to "" and the WhatsApp button disappears. */
+    whatsapp: "966565072169",
 
-    // TODO: add your LinkedIn profile URL, e.g. "https://www.linkedin.com/in/username"
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/md-easin-bhuyian-rakib-3730503b8",
 
     // GitHub account that owns this repository.
     github: "https://github.com/mdeasinbhuyianrakib-ctrl",
@@ -252,7 +253,7 @@ window.PORTFOLIO_DATA = {
   projects: [
     {
       status: "planned",
-      image: "", // TODO: add images/projects/ai-customer-support.jpg and put the path here
+      image: "images/projects/ai-customer-support-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Customer Support Automation", ar: "أتمتة دعم العملاء بالذكاء الاصطناعي", bn: "এআই কাস্টমার সাপোর্ট অটোমেশন" },
       problem: {
         en: "Support teams re-answer the same questions across email, WhatsApp and web chat, and replies slow down outside working hours.",
@@ -279,7 +280,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/lead-generation.jpg and put the path here
+      image: "images/projects/lead-generation-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Lead Generation Automation", ar: "أتمتة جذب العملاء المحتملين", bn: "লিড জেনারেশন অটোমেশন" },
       problem: {
         en: "Inbound leads arrive through several channels and are qualified by hand, so follow-up is inconsistent and slow.",
@@ -306,7 +307,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/email-automation.jpg and put the path here
+      image: "images/projects/ai-email-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Email Automation", ar: "أتمتة البريد الإلكتروني بالذكاء الاصطناعي", bn: "এআই ইমেইল অটোমেশন" },
       problem: {
         en: "A shared inbox mixes invoices, support requests and sales enquiries, and someone has to triage it manually every morning.",
@@ -333,7 +334,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/business-data.jpg and put the path here
+      image: "images/projects/business-data-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Business Data Automation", ar: "أتمتة بيانات الأعمال", bn: "বিজনেস ডেটা অটোমেশন" },
       problem: {
         en: "Operational numbers live in separate exports, so building a weekly view means repeating the same copy-paste work.",
@@ -360,7 +361,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/document-processing.jpg and put the path here
+      image: "images/projects/document-processing-automation.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "Document Processing Automation", ar: "أتمتة معالجة المستندات", bn: "ডকুমেন্ট প্রসেসিং অটোমেশন" },
       problem: {
         en: "Invoices, delivery notes and forms arrive as PDFs and images, and the values are keyed into the system by hand.",
@@ -387,7 +388,7 @@ window.PORTFOLIO_DATA = {
     },
     {
       status: "planned",
-      image: "", // TODO: add images/projects/reporting-dashboard.jpg and put the path here
+      image: "images/projects/ai-reporting-dashboard.svg", // generated diagram — replace with a real screenshot when you have one
       title: { en: "AI Reporting Dashboard", ar: "لوحة تقارير بالذكاء الاصطناعي", bn: "এআই রিপোর্টিং ড্যাশবোর্ড" },
       problem: {
         en: "Managers receive raw tables and still have to work out what changed and what needs attention.",

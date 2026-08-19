@@ -48,6 +48,15 @@
     if (!n) return "";
     return "https://wa.me/" + n + (text ? "?text=" + encodeURIComponent(text) : "");
   }
+  /* Show the WhatsApp number the way the phone number is written whenever
+     they are the same number; otherwise fall back to the raw digits. */
+  function waDisplay() {
+    var digits = waNumber();
+    if (!digits) return "";
+    if (isSet(C.phone) && C.phone.replace(/[^0-9]/g, "") === digits) return C.phone;
+    return "+" + digits;
+  }
+
   function mailLink(subject, body) {
     if (!isSet(C.email)) return "";
     var q = [];
@@ -59,7 +68,7 @@
   /* channels used by hero / contact / footer — empty values are skipped */
   function channels() {
     var list = [];
-    if (isSet(C.whatsapp)) list.push({ key: "whatsapp", icon: "whatsapp", label: t("c_whatsapp"), value: "+" + waNumber(), href: waLink(C.inquirySubject), ext: true });
+    if (isSet(C.whatsapp)) list.push({ key: "whatsapp", icon: "whatsapp", label: t("c_whatsapp"), value: waDisplay(), href: waLink(C.inquirySubject), ext: true });
     if (isSet(C.linkedin)) list.push({ key: "linkedin", icon: "linkedin", label: t("c_linkedin"), value: C.linkedin.replace(/^https?:\/\/(www\.)?/, ""), href: C.linkedin, ext: true });
     if (isSet(C.github))   list.push({ key: "github",   icon: "github",   label: t("c_github"),   value: C.github.replace(/^https?:\/\/(www\.)?/, ""), href: C.github, ext: true });
     if (isSet(C.email))    list.push({ key: "email",    icon: "mail",     label: t("c_email"),    value: C.email, href: mailLink(C.inquirySubject) });
@@ -113,8 +122,9 @@
 
     var strip = slot("strip");
     if (strip) {
+      var langs = (P.spokenLanguages || []).map(function (l) { return tx(l.name); }).join(" · ");
       strip.innerHTML = items.slice(0, 4).map(function (h) { return "<li>" + esc(tx(h)) + "</li>"; }).join("") +
-                        "<li>EN · العربية · বাংলা</li>";
+                        (langs ? "<li>" + esc(langs) + "</li>" : "");
     }
   }
 
@@ -142,11 +152,17 @@
   }
 
   function renderSpokenLanguages() {
+    var langs = P.spokenLanguages || [];
     var box = slot("spoken-languages");
-    if (!box) return;
-    box.innerHTML = (P.spokenLanguages || []).map(function (l) {
-      return '<p class="row"><b>' + esc(tx(l.name)) + "</b><span>" + esc(tx(l.note)) + "</span></p>";
-    }).join("");
+    if (box) {
+      box.innerHTML = langs.map(function (l) {
+        return '<p class="row"><b>' + esc(tx(l.name)) + "</b><span>" + esc(tx(l.note)) + "</span></p>";
+      }).join("");
+    }
+    /* the About panel and the strip read the same list, so adding a language
+       in js/data.js updates every place it appears */
+    var inline = slot("spoken-inline");
+    if (inline) inline.textContent = langs.map(function (l) { return tx(l.name); }).join(" · ");
   }
 
   function renderAbout() {

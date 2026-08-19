@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-label="Planned workflow: Message then Intent detection then Knowledge base lookup then Draft reply then Confidence check then Send or escalate">
+  <title>AI Customer Support Automation — Planned workflow</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06162F"/><stop offset="0.55" stop-color="#0A1F44"/><stop offset="1" stop-color="#123063"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.82" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#1D6FE0" stop-opacity="0.34"/><stop offset="1" stop-color="#1D6FE0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect width="1280" height="800" fill="url(#bg)"/>
+    <rect width="1280" height="800" fill="url(#grid)"/>
+    <rect width="1280" height="800" fill="url(#glow)"/>
+    <rect x="0" y="0" width="7" height="800" fill="#1D6FE0"/>
+    <rect x="210" y="292" width="150" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="285" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Message</text><path d="M386 326 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M406 321 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="446" y="292" width="240" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="566" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Intent detection</text><path d="M712 326 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M732 321 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="772" y="292" width="299" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="921.5" y="333" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Knowledge base lookup</text><path d="M640 372 v32" stroke="#4C9AFF" stroke-width="2" stroke-opacity="0.75" fill="none"/><path d="M635 398 l5 6 5 -6" stroke="#4C9AFF" stroke-width="2" stroke-opacity="0.75" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="224" y="416" width="181" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="314.5" y="457" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Draft reply</text><path d="M431 450 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M451 445 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="491" y="416" width="240" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="611" y="457" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Confidence check</text><path d="M757 450 h24" stroke="#4C9AFF" stroke-width="2" fill="none"/><path d="M777 445 l6 5 -6 5" stroke="#4C9AFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="817" y="416" width="240" height="68" rx="12" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.20"/><text x="937" y="457" text-anchor="middle" font-size="21" fill="#DCE8F8" font-weight="500">Send or escalate</text>
+    <path d="M64 722 h130" stroke="#1D6FE0" stroke-width="3" stroke-linecap="round"/>
+    <text x="64" y="756" font-size="19" font-weight="700" letter-spacing="3.6" fill="#7FB2FF">PLANNED WORKFLOW</text>
+  </g>
+</svg>
